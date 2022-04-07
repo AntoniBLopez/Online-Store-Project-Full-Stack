@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // traemos la dependencia que hemos instalado
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -14,6 +14,13 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.(png|jpg|jpeg|svg|webp|gif)$/,
+                type: 'asset/resource',
+                generator: {
+                   filename: 'assets/pictures/[hash][ext]',
+                }
+             },
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
@@ -30,7 +37,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s[ac]ss$/i, // en [ac] lo que estamos diciendo es que puede ser una letra u otra letra, y la i del final no sé que es
+                test: /\.(css|scss)$/,
                 use: [
                     "style-loader",
                     "css-loader",
@@ -44,13 +51,13 @@ module.exports = {
             template: './public/index.html',
             filename: './index.html'
         }),
-        new MiniCssExtractPlugin({ // añadimos un nuevo plugin
+        new MiniCssExtractPlugin({
             filename: '[name].css'
         }),
     ],
-    devServer: { // me permite trabajar con todos los elementos que son clave para el entorno local de desarrollo
-        allowedHosts: path.join(__dirname, 'dist'), // permite saber dónde está trabajando el proyecto ('dist' de distribution)
+    devServer: {
+        allowedHosts: path.join(__dirname, 'dist'),
         compress: true,
-        port: 3005, // y el puerto en el que vamos a trabajar
+        port: 3005,
     }
 }

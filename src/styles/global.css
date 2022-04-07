@@ -1,0 +1,29 @@
+:root {
+    --white: #FFFFFF;
+    --black: 000000;
+    --dark: #232830;
+
+    --very-light-color: rgb(238, 238, 238);
+    --hospital-green: #ACD9B2;
+    --text-input-field: #F7F7F7;
+    --color-text-paragraph: rgb(170, 170, 170);
+
+    --small: 1.4rem;
+    --medium: 1.6rem;
+    --large: 1.8rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    box-sizing: border-box;
+
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Quicksand', sans-serif;
+}

@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.50.0",
     "sass-loader": "^12.6.0",
