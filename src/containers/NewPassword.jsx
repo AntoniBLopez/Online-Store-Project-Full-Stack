@@ -1,8 +1,8 @@
 import React from 'react'
-import '../styles/Login.scss'
+import '../styles/NewPassword.scss'
 import logo from'../../assets/pictures/logos/logo_yard_sale.svg'
 
-export const Login = () => {
+export const NewPassword = () => {
     return (
         <main className="main-login">
             <div className="form-container">
