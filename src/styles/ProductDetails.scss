@@ -1,0 +1,102 @@
+@use './globalStyle.css';
+
+* {
+    text-decoration: none;
+    list-style: none;
+}
+.product-detail {
+    position: absolute;
+    width: 100%;
+    right: 0;
+
+    padding-bottom: 24px;
+}
+.product-detail-close {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+
+    padding: 8px 10px;
+
+    background-color: rgb(255, 255, 255,0.9);
+    border-radius: 50%;
+}
+.product-detail-close:hover {
+    cursor: pointer;
+}
+.product-detail img:nth-child(2) {
+    width: 100%;
+    height: 36rem;
+
+    border-radius: 0 0 20px 20px;
+
+    object-fit: cover;
+}
+.points {
+    display: flex;
+    justify-content: center;
+}
+.points div {
+    width: 8px;
+    height: 8px;
+    margin: 8px 6px 0 6px;
+
+    border-radius: 50%;
+
+    background-color: var(--very-light-color);
+
+    list-style-type: none;
+    cursor: pointer;
+}
+.points div:nth-child(1) {
+    background-color: var(--color-text-paragraph); /* Punto foto seleccionada */
+}
+.product-info {
+    margin: 30px 34px 0 34px;
+}
+.product-info p:nth-child(1) {
+    margin-bottom: 2px;
+
+    font-weight: bold;
+    font-size: var(--medium);
+}
+.product-info p:nth-child(2) {
+    margin-bottom: 20px;
+
+    font-size: var(--medium);
+
+    color: var(--color-text-paragraph);
+}
+.product-info p:nth-child(3) {
+    margin-bottom: 55px;
+
+    font-size: var(--small);
+
+    color: var(--color-text-paragraph);
+}
+.primary-button {
+    width: 100%;
+    height: 5rem;
+
+    border-radius: 8px;
+    border: none;
+
+    font-size: var(--medium);
+    font-weight: bold;
+
+    color: var(--white);
+    background-color: var(--hospital-green);
+
+    cursor: pointer;
+}
+.add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (min-width: 768px) {
+    .product-detail {
+        max-width: 36rem;
+    }
+}

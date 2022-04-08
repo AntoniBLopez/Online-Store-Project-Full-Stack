@@ -1,0 +1,63 @@
+@use './globalStyle.css';
+
+:root {
+    --card-size: 14rem;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 14rem);
+    place-content: center;
+
+    margin-top: 4.1rem;
+
+    gap: 2.2rem;
+}
+.product-card {
+    width: var(--card-size);
+}
+.product-card img {
+    width: var(--card-size);
+    height: var(--card-size);
+}
+.product-card picture img{
+    border-radius: 20px;
+
+    object-fit: cover; /* Hace que la imágen no se vea estirada o comprimida al haberle cambiado su tamaño*/
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 1.2rem;
+}
+.product-info div p:nth-child(1) {
+    margin-bottom: 0.4rem;
+
+    font-weight: bold;
+    font-size: var(--medium);
+}
+.product-info div p:nth-child(2) {
+    font-size: var(--small);
+
+    color: var(--color-text-paragraph);
+}
+.product-info figure img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+@media (min-width: 768px) {
+    :root {
+        --card-size: 24rem;
+    }
+    .cards-container {
+        grid-template-columns: repeat(auto-fill, 24rem);
+    }
+    .product-card {
+        width: var(--card-size);
+    }
+    .product-card img {
+        width: var(--card-size);
+        height: var(--card-size);
+    }
+}
