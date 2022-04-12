@@ -6,3 +6,5 @@ export const Home = () => {
     <Header />
   )
 }
+
+export * from './Home.jsx'

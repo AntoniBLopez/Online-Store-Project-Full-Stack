@@ -3,7 +3,7 @@ import '../styles/MobileMenu.scss'
 
 export const MobileMenu = () => {
     return (
-        <main className="mobile-menu">
+        <main className="MobileMenu-container">
             <ul>
                 <li>
                     <a href="/">CATEGORIES</a>
@@ -37,10 +37,10 @@ export const MobileMenu = () => {
             </ul>
             <ul>
                 <li>
-                    <a href className="email">toni@example.com</a>
+                    <a href className="email-MobileMenu">toni@example.com</a>
                 </li>
                 <li>
-                    <a href className="sign-out">Sign out</a>
+                    <a href className="sign-out_MobileMenu">Sign out</a>
                 </li>
             </ul>
         </main>

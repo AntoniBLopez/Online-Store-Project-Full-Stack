@@ -1,6 +1,6 @@
 @use './globalStyle.css';
 
-.menu-container {
+.menu-container_HomeMenuDeskstop {
     width: 10rem;
     height: auto;
 
@@ -8,30 +8,29 @@
     border: 1px solid var(--very-light-color);
     border-radius: 5px;
 }
-.menu-container ul {
+.menu-container_HomeMenuDeskstop ul {
     list-style: none;
 }
-.menu-container ul li {
+.menu-container_HomeMenuDeskstop ul li {
     text-align: end;
 }
-.menu-container ul li:not(:last-child) a {
+.menu-container_HomeMenuDeskstop ul li:not(:last-child) a {
     margin-bottom: 3rem;
 
     font-weight: bold;
 
     color: var(--black);
 }
-.menu-container ul li:last-child {
+.menu-container_HomeMenuDeskstop ul li:last-child {
     padding-top: 2rem;
     border-top: 1px solid var(--very-light-color);
 }
-.menu-container ul li:last-child a{
-
+.menu-container_HomeMenuDeskstop ul li:last-child a{
     font-size: var(--small);
 
     color: var(--hospital-green);
 }
-.menu-container ul li a {
+.menu-container_HomeMenuDeskstop ul li a {
     display: inline-block;
 
     text-decoration: none;

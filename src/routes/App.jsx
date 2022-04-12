@@ -10,8 +10,8 @@ import { Layout } from '../containers/Layout'
 import '../styles/globalStyle.css';
 import { HomeScreen } from '../containers/HomeScreen';
 import { Login } from '../containers/Login';
-import { MobileMenu } from '../containers/MobileMenu';
-import { HomeMenuDeskstop } from '../containers/HomeMenuDeskstop';
+import { MobileMenu } from '../components/MobileMenu';
+import { HomeMenuDeskstop } from '../components/HomeMenuDeskstop';
 import { CreateAccount } from '../containers/CreateAccount';
 import { NewPassword } from '../containers/NewPassword';
 import { EmailSend } from '../containers/EmailSend';

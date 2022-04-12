@@ -1,35 +1,35 @@
 @use './globalStyle.css';
 
-.main-login {
+.EmailSend-container {
     display: grid; /* con grid y la línea de debajo --> */
     place-items: center;  /* centramos el contenido tanto vertical como horizontalmente */
 
     width: 100%;
     height: 100vh;
 }
-.form-container {
+.form-container_EmailSend {
     display: grid;
     justify-items: center;
 
     max-width: 300px;
     width: 90%;
 }
-.logo-container {
+.logo-container_EmailSend {
     justify-self: center;
 }
-.logo {
+.logo-EmailSend {
     margin-bottom: 4.8rem;
     width: 15rem;
 }
 
-.title {
+.title-EmailSend {
     text-align: center;
 
     margin-bottom: 1.2rem;
 
     font-size: var(--large);
 }
-.subtitle {
+.subtitle-EmailSend {
     text-align: center;
 
     margin-bottom: 3.2rem;
@@ -39,7 +39,7 @@
 
     color: var(--black);
 }
-.email-image {
+.email-image_EmailSend {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,21 +51,23 @@
 
     background-color: var(--very-light-color);
 }
-.email-image img {
+.email-image_EmailSend img {
     width: 8rem;
 }
-.resend {
+.resend-EmailSend {
     font-size: var(--small);
 }
-.resend span{
+.resend-EmailSend span{
     color: var(--text-span-email);
 }
-.resend a{
-    text-decoration: none;
+.resend-EmailSend a{
+    margin-left: 5px;
 
     color: var(--hospital-green);
+
+    text-decoration: none;
 }
-.primary-button {
+.primary-button_EmailSend {
     width: 100%;
     height: 5rem;
 
@@ -80,12 +82,15 @@
 
     cursor: pointer;
 }
-.login-button {
+.login-button_EmailSend {
     margin-top: 1.4rem;
     margin-bottom: 3rem;
 }
 @media (min-width: 768px) {
-    .logo-container {
+    .logo-container_EmailSend {
         display: none;
+    }
+    .EmailSend .Header {
+        display: flex;
     }
 }

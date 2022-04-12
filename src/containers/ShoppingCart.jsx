@@ -5,12 +5,12 @@ import closeIcon from '../../assets/pictures/icons/icon_close.png'
 
 export const ShoppingCart = () => {
     return (
-        <aside className="product-detail">
-            <div className="title-container">
+        <aside className="ShoppingCart-container">
+            <div className="title-container_ShoppingCart">
                 <img src={arrowIcon} alt="Flecha para volver atrás" />
-                <p className="title">Shopping cart</p>
+                <p className="title-ShoppingCart">Shopping cart</p>
             </div>
-            <div className="my-order-content">
+            <div className="my-order-content_ShoppingCart">
                 <div className="shopping-cart">
                     <figure>
                         <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike" />
@@ -91,7 +91,7 @@ export const ShoppingCart = () => {
                     <p>$120,00</p>
                     <img src={closeIcon} alt="Quitar producto del carrito" />
                 </div>
-                <div className="order">
+                <div className="order-ShoppingCart">
                     <div>
                         <p>
                             <span>Total</span>
@@ -99,7 +99,7 @@ export const ShoppingCart = () => {
                     </div>
                     <p>$720.00</p>
                 </div>
-                <input type="submit" className="primary-button" defaultValue="Checkout" />
+                <input type="submit" className="primary-button_ShoppingCart" value="Checkout" />
             </div>
         </aside>
     )

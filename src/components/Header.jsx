@@ -6,13 +6,13 @@ import shoppingIcon from '../../assets/pictures/icons/icon_shopping_cart.svg'
 
 export const Header = () => {
     return (
-        <nav>
-            <img src={menuIcon} className="menu" alt="Es el icono del menu" />
-            <img src={logo} className="logo" alt="Es el logo de la web" />
-            <div className="navbar-left">
+        <nav className='header-container'>
+            <img src={menuIcon} className="menu-header" alt="Es el icono del menu" />
+            <img src={logo} className="logo-header" alt="Es el logo de la web" />
+            <div className="navbar-left_header">
                 <ul>
                     <li>
-                        <a href className="all">All</a>
+                        <a href>All</a>
                     </li>
                     <li>
                         <a href>Clothes</a>
@@ -32,13 +32,13 @@ export const Header = () => {
                 </ul>
 
             </div>
-            <div className="navbar-right">
+            <div className="navbar-right_header">
                 <ul>
-                    <li className="navbar-email">toni@example.com</li>
+                    <li className="navbar-email_header">toni@example.com</li>
                     <picture>
                         <img src="https://img.icons8.com/ios/10/000000/expand-arrow--v2.png" alt="" />
                     </picture>
-                    <li className="navbar-shopping-cart">
+                    <li className="navbar-shoppingCart_header">
                         <img src={shoppingIcon} alt="Es el carrito de compras" />
                         <div>2</div>
                     </li>

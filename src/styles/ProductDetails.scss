@@ -1,17 +1,16 @@
 @use './globalStyle.css';
 
-* {
-    text-decoration: none;
-    list-style: none;
-}
-.product-detail {
+.ProductDetails-container {
     position: absolute;
     width: 100%;
     right: 0;
 
     padding-bottom: 24px;
+
+    text-decoration: none;
+    list-style: none;
 }
-.product-detail-close {
+.product-detail-close_ProductDetails {
     position: absolute;
     top: 12px;
     left: 12px;
@@ -22,10 +21,10 @@
     background-color: rgb(255, 255, 255,0.9);
     border-radius: 50%;
 }
-.product-detail-close:hover {
+.product-detail-close_ProductDetails:hover {
     cursor: pointer;
 }
-.product-detail img:nth-child(2) {
+.ProductDetails-container img:nth-child(2) {
     width: 100%;
     height: 36rem;
 
@@ -33,11 +32,11 @@
 
     object-fit: cover;
 }
-.points {
+.points-ProductDetails {
     display: flex;
     justify-content: center;
 }
-.points div {
+.points-ProductDetails div {
     width: 8px;
     height: 8px;
     margin: 8px 6px 0 6px;
@@ -49,33 +48,33 @@
     list-style-type: none;
     cursor: pointer;
 }
-.points div:nth-child(1) {
+.points-ProductDetails div:nth-child(1) {
     background-color: var(--color-text-paragraph); /* Punto foto seleccionada */
 }
-.product-info {
+.product-info_ProductDetails {
     margin: 30px 34px 0 34px;
 }
-.product-info p:nth-child(1) {
+.product-info_ProductDetails p:nth-child(1) {
     margin-bottom: 2px;
 
     font-weight: bold;
     font-size: var(--medium);
 }
-.product-info p:nth-child(2) {
+.product-info_ProductDetails p:nth-child(2) {
     margin-bottom: 20px;
 
     font-size: var(--medium);
 
     color: var(--color-text-paragraph);
 }
-.product-info p:nth-child(3) {
+.product-info_ProductDetails p:nth-child(3) {
     margin-bottom: 55px;
 
     font-size: var(--small);
 
     color: var(--color-text-paragraph);
 }
-.primary-button {
+.primary-button_ProductDetails {
     width: 100%;
     height: 5rem;
 
@@ -90,13 +89,13 @@
 
     cursor: pointer;
 }
-.add-to-cart-button {
+.add-to-cart-button_ProductDetails {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 @media (min-width: 768px) {
-    .product-detail {
+    .ProductDetails-container {
         max-width: 36rem;
     }
 }

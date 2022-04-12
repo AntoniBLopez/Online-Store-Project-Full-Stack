@@ -1,30 +1,33 @@
 import React from 'react'
 import '../styles/MyAccount.scss'
+import { Header } from '../components/Header'
 
 export const MyAccount = () => {
     return (
-        <main className="main-login">
-            <div className="form-container">
-                <form action className="form">
-                    <section>
-                        <h1 className="title">My account</h1>
-                        <label htmlFor="name" className="label">
-                            <span>Name</span>
-                        </label>
-                        <p className="value">Toni Lopez</p>
-                        <label htmlFor="email" className="label">
-                            <span>Email address</span>
-                        </label>
-                        <p className="value">toni@example.com</p>
-                        <label htmlFor="password" className="label">
-                            <span>Password</span>
-                        </label>
-                        <p className="value">********</p>
-                    </section>
-                    <input type="submit" defaultValue="Edit" className="secondary-button edit-button" />
-                </form>
-            </div>
-        </main>
-
+        <div className="MyAccount">
+            <Header />
+            <main className="MyAccount-container">
+                <div className="form-container_MyAccount">
+                    <form action className="form-MyAccount">
+                        <section>
+                            <h1 className="title-MyAccount">My account</h1>
+                            <label htmlFor="name" className="label-MyAccount">
+                                <span>Name</span>
+                            </label>
+                            <p className="value-MyAccount">Toni Lopez</p>
+                            <label htmlFor="email" className="label-MyAccount">
+                                <span>Email address</span>
+                            </label>
+                            <p className="value-MyAccount">toni@example.com</p>
+                            <label htmlFor="password" className="label-MyAccount">
+                                <span>Password</span>
+                            </label>
+                            <p className="value-MyAccount">********</p>
+                        </section>
+                        <input type="submit" value="Edit" className="secondary-button_MyAccount edit-button_MyAccount" />
+                    </form>
+                </div>
+            </main>
+        </div>
     )
 }

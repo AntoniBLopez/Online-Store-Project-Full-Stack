@@ -1,13 +1,16 @@
 @use './globalStyle.css';
 
-.main-login {
+.MyAccount {
+    height: 100vh;
+}
+.MyAccount-container {
     display: grid; /* con grid y la línea de debajo --> */
     place-items: center;  /* centramos el contenido tanto vertical como horizontalmente */
 
     width: 100%;
-    height: 100vh;
+    height: 90%;
 }
-.form-container {
+.form-container_MyAccount {
     display: grid;
 
     max-width: 300px;
@@ -15,41 +18,31 @@
     height: 100%;
 }
 
-.title {
+.title-MyAccount {
     text-align: start;
     margin-bottom: 4.7rem;
     font-size: var(--large);
 }
-.subtitle {
-    text-align: center;
-
-    margin-bottom: 3.2rem;
-
-    font-weight: 300;
-    font-size: var(--medium);
-
-    color: var(--black);
-}
-.form {
+.form-MyAccount {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
 
 }
-.form section {
+.form-MyAccount section {
     display: flex;
     flex-direction: column;
 
     margin-top: 3.4rem;
 }
-.label {
+.label-MyAccount {
     margin-bottom: 0.4rem;
 
     font-weight: bold;
     font-size: var(--small);
 }
-.value {
+.value-MyAccount {
     margin: 8px 0 32px 0;
 
     font-size: var(--medium);
@@ -57,7 +50,7 @@
     color: var(--color-text-paragraph);
 }
 
-.secondary-button {
+.secondary-button_MyAccount {
     width: 100%;
     height: 5rem;
 
@@ -72,11 +65,11 @@
 
     cursor: pointer;
 }
-.edit-button {
+.edit-button_MyAccount {
     margin-bottom: 2.2rem;
 }
 @media (min-width: 768px) {
-    .form {
+    .form-MyAccount {
         justify-content: center;
     }
 }

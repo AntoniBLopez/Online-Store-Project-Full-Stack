@@ -1,68 +1,66 @@
 @use './globalStyle.css';
 
-* {
+.header-container {
+    display: flex;
     text-decoration: none;
     list-style: none;
-}
-nav {
-    display: flex;
     justify-content: space-between;
 
     padding: 10px 15px;
     border-bottom: 1px solid var(--very-light-color);
 }
-.menu {
+.menu-header {
     display: block;
 }
-.logo {
+.logo-header {
     margin: 0;
 }
-.logo {
+.logo-header {
     width: 10rem;
 }
-.navbar-left ul,
-.navbar-right ul {
+.navbar-left_header ul,
+.navbar-right_header ul {
     display: flex;
     align-items: center;
 
     list-style: none;
 }
-.navbar-left {
+.navbar-left_header {
     display: none;
 }
-.navbar-left ul {
+.navbar-left_header ul {
     margin-left: 12px;
 }
-.navbar-left ul li a,
-.navbar-right ul li a {
+.navbar-left_header ul li a,
+.navbar-right_header ul li a {
     color: var(--color-text-paragraph);
 
     padding: 2px 10px;
 
     text-decoration: none;
 }
-.navbar-left ul li a:hover,
-.navbar-right ul li a:hover {
+.navbar-left_header ul li a:hover,
+.navbar-right_header ul li a:hover {
     border: 1px solid var(--hospital-green);
     border-radius: 10px;
 
     color: var(--hospital-green);
 }
-.navbar-email {
+.navbar-email_header {
     display: none;
     color: var(--color-text-paragraph);
     margin: 10px 2px 12px;
 
     font-size: var(--small);
 }
-.navbar-right ul picture img {
+.navbar-right_header ul picture img {
     display: none;
 }
-.navbar-shopping-cart {
+.navbar-shoppingCart_header {
     position: relative;
     margin-left: 20px;
 }
-.navbar-shopping-cart div {
+.navbar-shoppingCart_header div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,22 +78,22 @@ nav {
     font-weight: bold;
 }
 @media (min-width: 768px) {
-    nav {
+    .header-container {
         padding: 10px 30px;
     }
-    .menu {
+    .menu-header {
         display: none;
     }
-    .logo {
+    .logo-header {
         width: 15rem;
     }
-    .navbar-left {
+    .navbar-left_header {
         display: flex;
     }
-    .navbar-email {
+    .navbar-email_header {
         display: flex;
     }
-    .navbar-right ul picture img {
+    .navbar-right_header ul picture img {
         display: flex;
     }
 }

@@ -1,17 +1,20 @@
 @use './globalStyle.css';
 
-.my-order {
+.MyOrdersList {
+    height: 100vh;
+}
+.MyOrdersList-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     width: 100%;
-    height: 100vh;
+    height: 90%;
 }
-.title-order {
+.title-order_MyOrdersList {
     display: none;
 }
-.my-order-container {
+.my-order-container_MyOrdersList {
     display: grid;
     grid-template-rows: auto 1 fr auto;
 
@@ -19,11 +22,11 @@
     max-width: 30rem;
     padding-top: 3.2rem;
 }
-.my-order-content {
+.my-order-content_MyOrdersList {
     display: flex;
     flex-direction: column;
 }
-.order {
+.order-MyOrdersList {
     display: grid;
     align-items: center;
     grid-template-columns: auto 1fr auto;
@@ -31,33 +34,33 @@
 
     gap: 1.6rem;
 }
-.order p:first-child {
+.order-MyOrdersList p:first-child {
     display: flex;
     flex-direction: column;
 }
-.order span:first-child {
+.order-MyOrdersList span:first-child {
     font-size: var(--medium);
     font-weight: bold;
 }
-.order span:nth-child(2) {
+.order-MyOrdersList span:nth-child(2) {
     font-size: var(--small);
 
     color: var(--color-text-paragraph);
 }
-.order p:nth-child(2) {
+.order-MyOrdersList p:nth-child(2) {
     text-align: end;
     font-weight: bold;
 }
 @media (min-width: 768px) {
-    .title-order {
+    .title-order_MyOrdersList {
         display: block;
 
-        margin-top: 14.1rem;
-        margin-bottom: 4.7rem;
+        margin-top: 10.1rem;
+        margin-bottom: 3.7rem;
 
         font-size: var(--large);
     }
-    .my-order-container {
+    .my-order-container_MyOrdersList {
         max-width: 40rem;
         padding-top: 0;
     }

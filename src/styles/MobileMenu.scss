@@ -3,7 +3,7 @@
 :root {
     --margin-distance: 3.9rem
 }
-.mobile-menu {
+.MobileMenu-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,36 +12,36 @@
 
     padding: var(--margin-distance);
 }
-.mobile-menu ul {
+.MobileMenu-container ul {
     list-style: none;
 }
-.mobile-menu  ul:nth-child(1) {
+.MobileMenu-container  ul:nth-child(1) {
     border-bottom: 1px solid var(--very-light-color);
     margin-bottom: var(--margin-distance);
 }
-.mobile-menu ul li {
+.MobileMenu-container ul li {
     margin-bottom: var(--margin-distance);
 }
-.mobile-menu a {
+.MobileMenu-container a {
     font-weight: bold;
 
     color: var(--black);
 
     text-decoration: none;
 }
-.mobile-menu ul:last-child {
+.MobileMenu-container ul:last-child {
     margin-bottom: 1.6rem;
 }
-.mobile-menu ul:last-child li:first-child {
+.MobileMenu-container ul:last-child li:first-child {
     margin-bottom: 0;
 }
-.mobile-menu .email {
+.MobileMenu-container .email-MobileMenu {
     margin-bottom: 0.2rem;
 
     font-weight: 300;
     font-size: var(--small);
 }
-.mobile-menu .sign-out {
+.MobileMenu-container .sign-out_MobileMenu {
     font-size: var(--small);
     color: var(--hospital-green);
 }
