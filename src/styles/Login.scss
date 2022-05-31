@@ -1,104 +1,78 @@
-@use './globalStyle.css';
+@import 'vars';
 
+.Login {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
 .Login-container {
-    display: grid; /* con grid y la línea de debajo --> */
-    place-items: center;  /* centramos el contenido tanto vertical como horizontalmente */
-
-    width: 100%;
-    height: 100vh;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	width: 300px;
 }
-.form-container_Login {
-    display: grid;
-
-    width: 90%;
-    max-width: 30rem;
+.logo {
+	width: 150px;
+	margin-bottom: 48px;
+	justify-self: center;
+	display: none;
 }
-.logo-container_Login {
-    justify-self: center;
+.form {
+	display: flex;
+	flex-direction: column;
 }
-.logo-Login {
-    margin-bottom: 4.8rem;
-    width: 15rem;
+.form a {
+	color: var(--hospital-green);
+	font-size: var(--sm);
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 52px;
 }
-.form-Login {
-    display: flex;
-    flex-direction: column;
+.label {
+	font-size: var(--sm);
+	font-weight: bold;
+	margin-bottom: 4px;
 }
-.label-Login {
-    margin-bottom: 0.4rem;
-
-    font-weight: bold;
-    font-size: var(--small);
+.input {
+	background-color: var(--text-input-field);
+	border: none;
+	border-radius: 8px;
+	height: 30px;
+	font-size: var(--md);
+	padding: 6px;
+	margin-bottom: 12px;
 }
-.input-Login {
-    height: 3rem;
-    padding: 0.6rem;
-    margin-bottom: 1.2rem;
-
-    font-size: var(--medium);
-
-    background-color: var(--very-light-color);
-
-    border: none;
-    border-radius: 8px;
+.input-email {
+	margin-bottom: 22px;
 }
-.input-email_Login {
-    margin-bottom: 2.2rem;
+.primary-button {
+	background-color: var(--hospital-green);
+	border-radius: 8px;
+	border: none;
+	color: var(--white);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 50px;
 }
-.primary-button_Login {
-    width: 100%;
-    height: 5rem;
-
-    border-radius: 8px;
-    border: none;
-
-    font-size: var(--medium);
-    font-weight: bold;
-
-    color: var(--white);
-    background-color: var(--hospital-green);
-
-    cursor: pointer;
+.secondary-button {
+	background-color: var(--white);
+	border-radius: 8px;
+	border: 1px solid var(--hospital-green);
+	color: var(--hospital-green);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 50px;
 }
-.login-button_Login {
-    margin-top: 2.2rem;
-    margin-bottom: 2rem;
+.login-button {
+	margin-top: 14px;
+	margin-bottom: 30px;
 }
-.form-Login a {
-    text-align: center;
-
-    margin-bottom: 5.2rem;
-
-    font-size: var(--small);
-
-    color: var(--hospital-green);
-
-    text-decoration: none;
-}
-.secondary-button_Login {
-    position: absolute;
-    width: 90%;
-    max-width: 30rem;
-    height: 5rem;
-    bottom: 2.4rem;
-
-    border-radius: 8px;
-    border: 1px solid var(--hospital-green);
-
-    font-size: var(--medium);
-    font-weight: bold;
-
-    color: var(--hospital-green);
-    background-color: var(--white);
-
-    cursor: pointer;
-}
-@media (min-width: 768px) {
-    .logo-container_Login {
-        display: none;
-    }
-    .secondary-button_Login {
-        position: relative;
-        width: 30rem;
-    }
+@media (max-width: 640px) {
+	.logo {
+		display: block;
+	}
 }

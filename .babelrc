@@ -1,8 +1,9 @@
-// Reconocer los preset que acabamos de agregar con babel:
-
-{ // creamos un objeto
-    "presets": [ // añadimos dentro del array cada uno de los elementos que vamos a usar
-        "@babel/preset-env", // compila los ES más recientes
-        "@babel/preset-react" // para trabajar con jsx y toda la sintáxis de react que está en la librería
-    ]
+{
+	"presets": [
+		"@babel/preset-env",
+		"@babel/preset-react"
+	],
+	"plugins": [
+		"@babel/plugin-transform-runtime"
+	]
 }

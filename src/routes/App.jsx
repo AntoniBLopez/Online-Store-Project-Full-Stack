@@ -1,50 +1,42 @@
-import React from 'react'
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from 'react-router-dom'
-import { Home } from '../pages/Home'
-import { NotFound } from '../pages/NotFound'
-import { Layout } from '../containers/Layout'
-import '../styles/globalStyle.css';
-import { HomeScreen } from '../containers/HomeScreen';
-import { Login } from '../containers/Login';
-import { MobileMenu } from '../components/MobileMenu';
-import { HomeMenuDeskstop } from '../components/HomeMenuDeskstop';
-import { CreateAccount } from '../containers/CreateAccount';
-import { NewPassword } from '../containers/NewPassword';
-import { EmailSend } from '../containers/EmailSend';
-import { MyAccount } from '../containers/MyAccount';
-import { ProductDetails } from '../containers/ProductDetails';
-import { ShoppingCart } from '../containers/ShoppingCart';
-import { MyOrder } from '../containers/MyOrder';
-import { MyOrdersList } from '../containers/MyOrdersList';
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Layout from '@containers/Layout';
+import Home from '@pages/Home';
+import Login from '@pages/Login';
+import PasswordRecovery from '@pages/PasswordRecovery';
+import SendEmail from '@pages/SendEmail';
+import NewPassword from '@pages/NewPassword';
+import MyAccount from '@pages/MyAccount';
+import CreateAccount from '@pages/CreateAccount';
+import Checkout from '@pages/Checkout';
+import Orders from '@pages/Orders';
+import NotFound from '@pages/NotFound';
+import AppContext from '../context/AppContext';
+import useInitialState from '../hooks/useInitialState';
+import '@styles/global.css';
 
-// " Quiero que el enrutamiento del navegador disponga de -->
-// estas rutas: y añado los endpoints que deseo. "
-
-export const App = () => {
-  return (
-    <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/Login" element={<Login />} />
-          <Route exact path="/HomeScreen" element={<HomeScreen />} />
-          <Route exact path="/MobileMenu" element={<MobileMenu />} />
-          <Route exact path="/HomeMenuDeskstop" element={<HomeMenuDeskstop />} />
-          <Route exact path="/CreateAccount" element={<CreateAccount />} />
-          <Route exact path="/NewPassword" element={<NewPassword />} />
-          <Route exact path="/EmailSend" element={<EmailSend />} />
-          <Route exact path="/MyAccount" element={<MyAccount />} />
-          <Route exact path="/ProductDetails" element={<ProductDetails />} />
-          <Route exact path="/ShoppingCart" element={<ShoppingCart />} />
-          <Route exact path="/MyOrder" element={<MyOrder />} />
-          <Route exact path="/MyOrdersList" element={<MyOrdersList />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Layout>
-    </BrowserRouter>
-  )
+const App = () => {
+	const initialState = useInitialState();
+	return (
+		<AppContext.Provider value={initialState}>
+			<BrowserRouter>
+				<Layout>
+					<Switch>
+						<Route exact path="/" component={Home} />
+						<Route exact path="/login" component={Login} />
+						<Route exact path="/password-recovery" component={PasswordRecovery} />
+						<Route exact path="/send-email" component={SendEmail} />
+						<Route exact path="/new-password" component={NewPassword} />
+						<Route exact path="/account" component={MyAccount} />
+						<Route exact path="/signup" component={CreateAccount} />
+						<Route exact path="/checkout" component={Checkout} />
+						<Route exact path="/orders" component={Orders} />
+						<Route path="*" component={NotFound} />
+					</Switch>
+				</Layout>
+			</BrowserRouter>
+		</AppContext.Provider>
+	);
 }
+
+export default App;

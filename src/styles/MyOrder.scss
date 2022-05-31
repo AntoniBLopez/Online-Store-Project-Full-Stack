@@ -1,93 +1,64 @@
-@use './globalStyle.css';
+@import 'vars';
 
-.my-order {
-    display: grid;
-    place-items: center;
-
-    width: 100%;
-    height: 100vh;
+.MyOrder {
+	width: 360px;
+	padding: 24px;
+	box-sizing: border-box;
+	position: absolute;
+	right: 0;
+	background-color: white;
+	top: 60px;
+	bottom: 0;
+	border-radius: 6px;
+	border: 1px solid var(--very-light-pink);
 }
-.title-order {
-    display: none;
+.title-container {
+	display: flex;
 }
-.my-order-container {
-    display: grid;
-    grid-template-rows: auto 1 fr auto;
-
-    width: 90%;
-    max-width: 30rem;
+.title-container img {
+	transform: rotate(180deg);
+	margin-right: 14px;
 }
-.my-order-content {
-    display: flex;
-    flex-direction: column;
+.title {
+	font-size: var(--lg);
+	font-weight: bold;
 }
-.order-MyOrder {
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr;
-    height: 7.6rem;
-
-    margin-top: 1.7rem;
-    margin-bottom: 2.4rem;
-    border-radius: 1rem;
-    padding: 0 18px;
-
-    background-color: var(--text-input-field);
-
-    gap: 1.6rem;
+.order {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 16px;
+	align-items: center;
+	background-color: var(--text-input-field);
+	margin-bottom: 24px;
+	border-radius: 8px;
+	padding: 0 24px;
 }
-.order-MyOrder p:first-child {
-    display: flex;
-    flex-direction: column;
+.order p:nth-child(1) {
+	display: flex;
+	flex-direction: column;
 }
-.order-MyOrder span:first-child {
-    font-size: var(--medium);
-    font-weight: bold;
+.order p span:nth-child(1) {
+	font-size: var(--md);
+	font-weight: bold;
 }
-.order-MyOrder span:nth-child(2) {
-    font-size: var(--small);
-
-    color: var(--color-text-paragraph);
-}
-.order-MyOrder p:nth-child(2) {
-    text-align: end;
-    font-weight: bold;
-}
-.shopping-cart_MyOrder {
-    display: grid;
-    grid-template-columns: auto 1fr auto auto;
-    align-items: center;
-
-    margin-bottom: 1.8rem;
-
-    gap: 1.6rem;
-}
-.shopping-cart_MyOrder figure img {
-    width: 7rem;
-    height: 7rem;
-
-    border-radius: 20px;
-
-    object-fit: cover;
-}
-.shopping-cart_MyOrder p:nth-child(2) {
-    color: var(--color-text-paragraph);
-}
-.shopping-cart_MyOrder p:nth-child(3) {
-    font-size: var(--medium);
-    font-weight: bold;
+.order p:nth-child(2) {
+	text-align: end;
+	font-weight: bold;
 }
 
-@media (min-width: 768px) {
-    .title-order {
-        display: block;
-
-        margin-top: 8.7rem;
-        margin-bottom: 2.3rem;
-
-        font-size: var(--large);
-    }
-    .my-order-container {
-        max-width: 40rem;
-    }
+.primary-button {
+	background-color: var(--hospital-green);
+	border-radius: 8px;
+	border: none;
+	color: var(--white);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 50px;
+}
+@media (max-width: 640px) {
+	.MyOrder {
+		width: 100%;
+	}
 }
