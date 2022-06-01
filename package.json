@@ -39,5 +39,6 @@
     "sass": "^1.38.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1"
-  }
+  },
+  "homepage": "https://toniblopez.github.io/Online-Store-Project-React/"
 }
