@@ -20,7 +20,7 @@ The application works client-side for the most part, taking advantage of the sto
 ## Installation :electric_plug:
 Clone Online Store Project:
 ``
-git clone git@github.com:ToniBLopez/Online-Store-Project-React.git
+git clone git@github.com:ToniBLopez/Online-Store-Project-Full-Stack.git
  ``
 
 Install dependencies:
