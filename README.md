@@ -1,4 +1,4 @@
-# Full Stack Online Store Project :convenience_store:
+# Online Store Project Full Stack :convenience_store:
 The design inspiration comes from the Frontend Developer course and the React Practical course at Platzi.
 
 It is a React.js SPA of a fictitious mini store. The project consists of different views and pages which are accessed using React Router routes.
